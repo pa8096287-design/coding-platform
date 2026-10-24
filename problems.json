@@ -1,0 +1,321 @@
+[
+  {
+    "id": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "fn": "twoSum",
+    "description": "Given an array of numbers and a target, return the indices of the two numbers that add up to the target. Exactly one answer exists. Return the smaller index first.",
+    "example": "twoSum([2, 7, 11, 15], 9) \u2192 [0, 1]",
+    "starter": "function twoSum(nums, target) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          [
+            2,
+            7,
+            11,
+            15
+          ],
+          9
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            2,
+            4
+          ],
+          6
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3
+          ],
+          6
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "palindrome",
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "fn": "isPalindrome",
+    "description": "Return true if the string reads the same forwards and backwards. Ignore spaces, punctuation and letter case.",
+    "example": "isPalindrome('A man, a plan, a canal: Panama') \u2192 true",
+    "starter": "function isPalindrome(str) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          "A man, a plan, a canal: Panama"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "race a car"
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          " "
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "id": "fizzbuzz",
+    "title": "FizzBuzz",
+    "difficulty": "Easy",
+    "fn": "fizzBuzz",
+    "description": "Return an array of strings from 1 to n. Use 'Fizz' for multiples of 3, 'Buzz' for multiples of 5 and 'FizzBuzz' for multiples of both. Otherwise use the number as a string.",
+    "example": "fizzBuzz(5) \u2192 ['1', '2', 'Fizz', '4', 'Buzz']",
+    "starter": "function fizzBuzz(n) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          3
+        ],
+        "expected": [
+          "1",
+          "2",
+          "Fizz"
+        ]
+      },
+      {
+        "args": [
+          5
+        ],
+        "expected": [
+          "1",
+          "2",
+          "Fizz",
+          "4",
+          "Buzz"
+        ]
+      },
+      {
+        "args": [
+          15
+        ],
+        "expected": [
+          "1",
+          "2",
+          "Fizz",
+          "4",
+          "Buzz",
+          "Fizz",
+          "7",
+          "8",
+          "Fizz",
+          "Buzz",
+          "11",
+          "Fizz",
+          "13",
+          "14",
+          "FizzBuzz"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reverse-words",
+    "title": "Reverse Words",
+    "difficulty": "Medium",
+    "fn": "reverseWords",
+    "description": "Reverse the order of words in a sentence. Remove extra spaces so words are separated by a single space.",
+    "example": "reverseWords('  the sky  is blue ') \u2192 'blue is sky the'",
+    "starter": "function reverseWords(s) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          "the sky is blue"
+        ],
+        "expected": "blue is sky the"
+      },
+      {
+        "args": [
+          "  hello   world  "
+        ],
+        "expected": "world hello"
+      },
+      {
+        "args": [
+          "single"
+        ],
+        "expected": "single"
+      }
+    ]
+  },
+  {
+    "id": "max-subarray",
+    "title": "Maximum Subarray",
+    "difficulty": "Medium",
+    "fn": "maxSubArray",
+    "description": "Find the contiguous subarray with the largest sum and return that sum.",
+    "example": "maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) \u2192 6",
+    "starter": "function maxSubArray(nums) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          [
+            -2,
+            1,
+            -3,
+            4,
+            -1,
+            2,
+            1,
+            -5,
+            4
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            5,
+            4,
+            -1,
+            7,
+            8
+          ]
+        ],
+        "expected": 23
+      }
+    ]
+  },
+  {
+    "id": "count-vowels",
+    "title": "Count Vowels",
+    "difficulty": "Easy",
+    "fn": "countVowels",
+    "description": "Return how many vowels (a, e, i, o, u) are in the string. Ignore letter case.",
+    "example": "countVowels('Hello World') \u2192 3",
+    "starter": "function countVowels(str) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          "Hello World"
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          "AEIOU"
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          "rhythm"
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "id": "anagram",
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "fn": "isAnagram",
+    "description": "Return true if the two strings contain exactly the same letters in any order. Ignore case.",
+    "example": "isAnagram('Listen', 'Silent') \u2192 true",
+    "starter": "function isAnagram(a, b) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          "Listen",
+          "Silent"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "hello",
+          "world"
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          "abc",
+          "abcd"
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "remove-duplicates",
+    "title": "Remove Duplicates",
+    "difficulty": "Medium",
+    "fn": "removeDuplicates",
+    "description": "Return a new array with duplicate numbers removed. Keep the first occurrence and the original order.",
+    "example": "removeDuplicates([1, 2, 2, 3, 1]) \u2192 [1, 2, 3]",
+    "starter": "function removeDuplicates(nums) {\n  // write your code here\n  \n}",
+    "cases": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            2,
+            3,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            5,
+            5,
+            5
+          ]
+        ],
+        "expected": [
+          5
+        ]
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      }
+    ]
+  }
+]

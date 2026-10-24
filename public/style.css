@@ -1,0 +1,143 @@
+:root {
+  --bg: #eef1f6;
+  --panel: #ffffff;
+  --ink: #1b2430;
+  --muted: #6a7686;
+  --line: #d9dfe8;
+  --accent: #3a5bd9;
+  --accent-dark: #2d47ad;
+  --pass: #1f8a5b;
+  --fail: #c2410c;
+  --editor-bg: #16202e;
+  --editor-ink: #e6edf7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  background: var(--editor-bg);
+  color: #fff;
+}
+.brand { font-weight: 800; font-size: 20px; letter-spacing: 0.3px; }
+.progress { display: flex; align-items: center; gap: 12px; font-size: 14px; color: #b8c4d6; }
+.bar { width: 130px; height: 6px; background: #2a374a; border-radius: 4px; overflow: hidden; }
+#progressFill { height: 100%; width: 0; background: #4ade9a; transition: width 0.3s; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr 1.25fr;
+  gap: 16px;
+  padding: 16px 24px 24px;
+  min-height: calc(100vh - 58px);
+}
+
+.list, .statement, .workspace {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.list { padding: 16px; }
+.list h2 { margin: 0 0 10px; font-size: 15px; color: var(--muted); font-weight: 600; }
+.list ul { list-style: none; margin: 0; padding: 0; }
+.list li button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 4px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+.list li button:hover { background: var(--bg); }
+.list li button.active { background: #e3e9fb; color: var(--accent-dark); }
+.check { color: var(--pass); font-weight: 800; }
+
+.statement { padding: 22px; align-self: start; }
+.title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.statement h1 { margin: 0; font-size: 24px; }
+.tag { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: #e3f4ec; color: var(--pass); }
+.tag.Medium { background: #fdf0dc; color: #a35a00; }
+.example {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.workspace { display: flex; flex-direction: column; overflow: hidden; }
+.editor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #101824;
+  color: #9fb0c7;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+.editor-head div { display: flex; gap: 8px; }
+
+button { font: inherit; cursor: pointer; }
+.primary, .ghost { padding: 7px 14px; border-radius: 6px; font-weight: 600; font-size: 13px; }
+.primary { background: var(--accent); color: #fff; border: 0; }
+.primary:hover { background: var(--accent-dark); }
+.primary:disabled { opacity: 0.6; cursor: wait; }
+.ghost { background: transparent; color: #9fb0c7; border: 1px solid #34435a; }
+.ghost:hover { color: #fff; }
+button:focus-visible, textarea:focus-visible { outline: 2px solid #8fa8ff; outline-offset: 2px; }
+
+#editor {
+  flex: 1;
+  min-height: 280px;
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  resize: none;
+  background: var(--editor-bg);
+  color: var(--editor-ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+.results { padding: 14px 16px; border-top: 1px solid var(--line); max-height: 260px; overflow-y: auto; }
+.muted { color: var(--muted); margin: 0; }
+.summary { font-weight: 800; margin: 0 0 8px; }
+.summary.ok { color: var(--pass); }
+.summary.bad { color: var(--fail); }
+.case { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; padding: 6px 0; border-top: 1px dashed var(--line); }
+.case.pass b { color: var(--pass); }
+.case.fail b { color: var(--fail); }
+
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; padding: 12px; }
+  .list ul { display: flex; flex-wrap: wrap; gap: 4px; }
+  .list li button { width: auto; }
+  .topbar { padding: 12px 14px; }
+}

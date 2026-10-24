@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeDock - practice JavaScript</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">CodeDock</div>
+    <div class="progress">
+      <span id="progressText">0 / 0 solved</span>
+      <div class="bar"><div id="progressFill"></div></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="list" aria-label="Problems">
+      <h2>Problems</h2>
+      <ul id="problemList"></ul>
+    </aside>
+
+    <section class="statement">
+      <div class="title-row">
+        <h1 id="title"></h1>
+        <span id="difficulty" class="tag"></span>
+      </div>
+      <p id="description"></p>
+      <pre id="example" class="example"></pre>
+    </section>
+
+    <section class="workspace">
+      <div class="editor-head">
+        <span>solution.js</span>
+        <div>
+          <button id="resetBtn" class="ghost">Reset code</button>
+          <button id="runBtn" class="primary">Run tests</button>
+        </div>
+      </div>
+      <textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+      <div id="results" class="results">
+        <p class="muted">Write your solution and press Run tests.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
